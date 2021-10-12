@@ -1,35 +1,5 @@
 #!/usr/bin/env zsh
-
-# Use variables for everything.
-  REPO_HOME=https://github.com/jhessin
-  SETUP_HOME=$HOME/setup
-  POP_SETUP=$SETUP_HOME/pop-setup
-  POP_REPO=$REPO_HOME/pop-setup.git
-  USER_BIN=$HOME/.local/bin
-  PROJECTS=$HOME/Projects
-  CONFIGS=$HOME/.config
-  FLUTTER_REPO=https://github.com/flutter/flutter.git
-  FLUTTER_HOME=$HOME/flutter
-  HOMEBREW_PATH=/home/linuxbrew/.linuxbrew
-  FONT_PATH=$HOME/.local/share/fonts
-
-# setup confirmation prompt
-function confirm {
-  read -r -p "$1 [y/N]" response
-  if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-    return 0
-  else
-    return 1
-  fi
-}
-
-# presudo so the user isn't surprised later
-echo We need sudo to set this stuff up.
-sudo echo Thank you we will be responsible!
-
-# Make sure we are in the right directory
-cd $POP_SETUP
-
+#
 # Setup proper programmer dvorak keymap.
 if confirm "Setup Programmer DVORAK?"; then
   localectl set-x11-keymap us pc105 dvp compose:102,numpad:shift3,kpdl:semi,keypad:atm,caps:escape

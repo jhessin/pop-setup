@@ -1,9 +1,11 @@
 neovim
+tmux
 enpass
 gh
+vlc
 dos2unix
 neofetch
 vifm
 zsh
 librust-openssl-dev
-tmux
+golang-go
