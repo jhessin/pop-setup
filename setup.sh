@@ -1,17 +1,17 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Use variables for everything.
-REPO_HOME=https://github.com/jhessin
-SETUP_HOME=$HOME/setup
-POP_SETUP=$SETUP_HOME/pop-setup
-POP_REPO=$REPO_HOME/pop-setup.git
-USER_BIN=$HOME/.local/bin
-PROJECTS=$HOME/Projects
-CONFIGS=$HOME/.config
-FLUTTER_REPO=https://github.com/flutter/flutter.git
-FLUTTER_HOME=$HOME/flutter
-HOMEBREW_PATH=/home/linuxbrew/.linuxbrew
-FONT_PATH=$HOME/.local/share/fonts
+  REPO_HOME=https://github.com/jhessin
+  SETUP_HOME=$HOME/setup
+  POP_SETUP=$SETUP_HOME/pop-setup
+  POP_REPO=$REPO_HOME/pop-setup.git
+  USER_BIN=$HOME/.local/bin
+  PROJECTS=$HOME/Projects
+  CONFIGS=$HOME/.config
+  FLUTTER_REPO=https://github.com/flutter/flutter.git
+  FLUTTER_HOME=$HOME/flutter
+  HOMEBREW_PATH=/home/linuxbrew/.linuxbrew
+  FONT_PATH=$HOME/.local/share/fonts
 
 # setup confirmation prompt
 function confirm {
@@ -26,20 +26,6 @@ function confirm {
 # presudo so the user isn't surprised later
 echo We need sudo to set this stuff up.
 sudo echo Thank you we will be responsible!
-
-
-# Clone/update repo if $HOME/setup/pop-setup exists or not.
-if [ -d $POP_SETUP ]; then
-  echo Repo downloaded updating...
-  cd $POP_SETUP
-  git pull
-  echo Repo updated
-else
-  echo Downloading repo...
-  mkdir $SETUP_HOME
-  git clone $POP_REPO $POP_SETUP
-  echo Repo downloaded!
-fi
 
 # Make sure we are in the right directory
 cd $POP_SETUP
@@ -58,18 +44,24 @@ if confirm "Do you need gpg keys?"; then
 fi
 
 # Copy sources to /etc/apt/sources.list.d/
+echo Copying sources for updates
 sudo cp ./sources/*.list /etc/apt/sources.list.d/
 
 # Update everything
+echo Updating your system please wait...
 sudo apt update
 sudo apt upgrade -y
 
 # Install everything in the apt.packages file
+echo Installing APT.PACKAGES
 sudo apt install $(cat apt.packages) -y
 
 # Install Homebrew
 if [ ! -d $HOMEBREW_PATH ]; then
+  echo INSTALLING HOMEBREW
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+  echo HOMBREW FOUND CHECKING PATH
 fi
 
 # install brew packages
@@ -170,3 +162,5 @@ fi
 
 # LAST STEP: setup neovim
 $CONFIGS/nvim/install.sh
+
+# vim:foldmethod=indent

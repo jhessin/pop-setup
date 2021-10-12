@@ -5,3 +5,5 @@ dos2unix
 neofetch
 vifm
 zsh
+librust-openssl-dev
+tmux

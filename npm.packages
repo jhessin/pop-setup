@@ -1,3 +1,4 @@
 yarn
 add-gitignore
 neovim
+bash-language-server
