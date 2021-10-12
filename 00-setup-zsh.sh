@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Add functions and vars
-source ./functions.sh
-source ./vars.sh
+export SETUP_HOME=$HOME/setup
+export POP_SETUP=$SETUP_HOME/pop-setup
+export POP_REPO=$REPO_HOME/pop-setup.git
 
 # presudo so the user isn't surprised later
 echo We need sudo to set this stuff up.
