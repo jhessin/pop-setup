@@ -10,6 +10,8 @@ PROJECTS=$HOME/Projects
 CONFIGS=$HOME/.config
 FLUTTER_REPO=https://github.com/flutter/flutter.git
 FLUTTER_HOME=$HOME/flutter
+HOMEBREW_PATH=/home/linuxbrew/.linuxbrew
+FONT_PATH=$HOME/.local/share/fonts
 
 # setup confirmation prompt
 function confirm {
@@ -65,6 +67,11 @@ sudo apt upgrade -y
 # Install everything in the apt.packages file
 sudo apt install $(cat apt.packages) -y
 
+# Install Homebrew
+if [ ! -d $HOMEBREW_PATH ]; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
 # Install all packages in the packages directory
 sudo apt install ./packages/*.deb
 
@@ -116,7 +123,11 @@ fi
 # install pip.packages
 pip install $(cat ./pip.packages) --user
 
-# TODO: install fonts
+# Install fonts
+if [ ! -d $FONT_PATH ]; then
+  mkdir -p $FONT_PATH
+fi
+cp ./fonts/ttf/*.* $FONT_PATH
 
 # Clone basic repositories
 if confirm "Login to gh?"; then
