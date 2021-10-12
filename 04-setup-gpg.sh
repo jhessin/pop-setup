@@ -18,8 +18,8 @@ if confirm "Do you need gpg keys?"; then
   echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 fi
 
-if confirm "Continue to ./05-apt-install.sh"; then
-  ./05-apt-install.sh
+if confirm "Continue to ./05-setup-apt.sh"; then
+  ./05-setup-apt.sh
 fi
 
 # vim:foldmethod=indent

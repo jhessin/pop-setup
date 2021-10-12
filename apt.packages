@@ -9,3 +9,9 @@ vifm
 zsh
 librust-openssl-dev
 golang-go
+
+cpu-checker
+qemu-kvm
+libvirt-daemon-system
+libvirt-clients
+bridge-utils
