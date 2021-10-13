@@ -21,6 +21,7 @@ if confirm "Install kitty terminal?"; then
   cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
   # Update the path to the kitty icon in the kitty.desktop file
   sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty.desktop
+  sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/kitty 50
 fi
 
 if confirm "Continue to ./07-setup-nvm.sh"; then
