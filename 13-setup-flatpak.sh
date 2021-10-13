@@ -14,8 +14,8 @@ cd $POP_SETUP
 # install flatpak packages
 flatpak install flathub $(cat ./flatpak.packages)
 
-if confirm "Continue to ./20-setup-brew.sh"; then
-  ./20-setup-brew.sh
+if confirm "Continue to ./14-setup-web.sh"; then
+  ./14-setup-web.sh
 fi
 
 # vim:foldmethod=indent
