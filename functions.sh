@@ -9,3 +9,7 @@ function confirm {
     return 1
   fi
 }
+
+function browse {
+  python3 -m webbrowser -t "$1"
+}
