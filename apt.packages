@@ -9,6 +9,7 @@ vifm
 zsh
 librust-openssl-dev
 golang-go
+gnome-tweaks
 
 cpu-checker
 qemu-kvm
