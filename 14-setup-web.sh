@@ -16,6 +16,14 @@ if confirm "Would you like to install Chrome?"; then
   echo
 fi
 
+# install Xtreme Download Manager
+if confirm "Would you like to install Xtreme Download Manager?"; then
+  echo
+  echo Opening browser - please wait...
+  echo
+  browse "https://xtremedownloadmanager.com/#downloads"
+fi
+
 # install android studio
 if confirm "Would you like to install Android Studio?"; then
   echo
