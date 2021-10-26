@@ -18,3 +18,4 @@ libvirt-clients
 bridge-utils
 mlocate
 solaar
+wmctrl
