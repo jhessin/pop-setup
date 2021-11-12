@@ -19,3 +19,8 @@ bridge-utils
 mlocate
 solaar
 wmctrl
+
+blueman
+ofono
+ofono-phonesim
+

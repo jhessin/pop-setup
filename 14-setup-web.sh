@@ -34,8 +34,8 @@ if confirm "Would you like to install Android Studio?"; then
   echo
 fi
 
-if confirm "Continue to ./20-setup-brew.sh"; then
-  ./20-setup-brew.sh
+if confirm "Continue to ./15-setup-bluetooth.sh"; then
+  ./15-setup-bluetooth.sh
 fi
 
 # vim:foldmethod=indent
