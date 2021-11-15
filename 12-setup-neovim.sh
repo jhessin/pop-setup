@@ -4,6 +4,10 @@
 source ./functions.sh
 source ./vars.sh
 
+if confirm "Get the appimage of Neovim?"; then
+  browse https://github.com/neovim/neovim/releases
+fi
+
 # setup neovim
 $CONFIGS/nvim/install.sh
 
