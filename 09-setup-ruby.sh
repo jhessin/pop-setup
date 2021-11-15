@@ -19,8 +19,8 @@ if confirm "Install ruby and gems?"; then
   sudo gem install $(cat ./gem.packages)
 fi
 
-if confirm "Continue to ./10-setup-pip.sh"; then
-  ./10-setup-pip.sh
+if confirm "Continue to ./10-setup-pyenv.sh"; then
+  ./10-setup-pyenv.sh
 fi
 
 # vim:foldmethod=indent

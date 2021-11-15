@@ -12,12 +12,17 @@ sudo echo Thank you we will be responsible!
 cd $POP_SETUP
 
 # install pip
-if confirm "Do you need to install pip?"; then
-  sudo python3 get-pip.py
+if confirm "Do you need to install pyenv?"; then
+  curl https://pyenv.run | bash
 fi
 
+source ~/.zprofile
+pyenv install 3.10.0
+pyenv global 3.10.0
+pyenv virtualenv 3.10.0 pyx
+
 # install pip.packages
-pip install $(cat ./pip.packages) --user
+pip3 install $(cat ./pip.packages) --user
 
 if confirm "Continue to ./11-setup-fonts.sh"; then
   ./11-setup-fonts.sh
