@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+export REPO_HOME="https://github.com/jhessin"
 export SETUP_HOME=$HOME/setup
 export POP_SETUP=$SETUP_HOME/pop-setup
 export POP_REPO=$REPO_HOME/pop-setup.git
