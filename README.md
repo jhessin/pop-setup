@@ -9,4 +9,6 @@ categories: []
 
 To run this project run this from the command line.
 
+```sh
 sh -c "$(curl -fsSL bit.ly/jhessin-pop-setup)"
+```
