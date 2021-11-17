@@ -18,8 +18,8 @@ if [ ! -d $HOME/.cargo ]; then
 fi
 cargo install $(cat ./cargo.packages)
 
-if confirm "Continue to ./09-setup-ruby.sh"; then
-  ./09-setup-ruby.sh
+if confirm "Continue?"; then
+  ./11-*.sh
 fi
 
 # vim:foldmethod=indent

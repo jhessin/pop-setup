@@ -20,8 +20,8 @@ if confirm "Install ruby and gems?"; then
   gem install $(cat ./gem.packages)
 fi
 
-if confirm "Continue to ./10-setup-pyenv.sh"; then
-  ./10-setup-pyenv.sh
+if confirm "Continue?"; then
+  ./09-*.sh
 fi
 
 # vim:foldmethod=indent

@@ -29,8 +29,8 @@ fi
 python3 -m pip install --upgrade pip
 pip install $(cat ./pip.packages)
 
-if confirm "Continue to ./11-setup-fonts.sh"; then
-  ./11-setup-fonts.sh
+if confirm "Continue?"; then
+  ./10-*.sh
 fi
 
 # vim:foldmethod=indent

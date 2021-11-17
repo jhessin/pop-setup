@@ -14,8 +14,8 @@ $CONFIGS/nvim/install.sh
 # Make sure we are in the right directory
 cd $POP_SETUP
 
-if confirm "Continue to ./13-setup-flatpak.sh"; then
-  ./13-setup-flatpak.sh
+if confirm "Continue?"; then
+  ./13-*.sh
 fi
 
 # vim:foldmethod=indent

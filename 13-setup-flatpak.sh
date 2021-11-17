@@ -14,8 +14,8 @@ cd $POP_SETUP
 # install flatpak packages
 flatpak install flathub $(cat ./flatpak.packages)
 
-if confirm "Continue to ./14-setup-web.sh"; then
-  ./14-setup-web.sh
+if confirm "Continue?"; then
+  ./14-*.sh
 fi
 
 # vim:foldmethod=indent

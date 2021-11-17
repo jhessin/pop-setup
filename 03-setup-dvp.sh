@@ -29,8 +29,8 @@ if confirm "Setup Programmer DVORAK?"; then
   rm kbddvp-1_2_1-src-linux.tgz
 fi
 
-if confirm "Do you want to continue to ./04-setup-enpass.sh"; then
-  ./04-setup-enpass.sh
+if confirm "Continue?"; then
+  ./04-*.sh
 fi
 
 # vim:foldmethod=indent

@@ -20,8 +20,8 @@ fi
 echo Copying sources for updates
 sudo cp ./sources/*.list /etc/apt/sources.list.d/
 
-if confirm "Continue to ./05-setup-apt.sh"; then
-  ./05-setup-apt.sh
+if confirm "Continue?"; then
+  ./05-*.sh
 fi
 
 # vim:foldmethod=indent

@@ -24,8 +24,8 @@ if confirm "Install kitty terminal?"; then
   sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/kitty 50
 fi
 
-if confirm "Continue to ./07-setup-nvm.sh"; then
-  ./07-setup-nvm.sh
+if confirm "Continue?"; then
+  ./07-*.sh
 fi
 
 # vim:foldmethod=indent

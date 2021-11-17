@@ -13,8 +13,8 @@ if [ ! -d $FONT_PATH ]; then
 fi
 cp ./fonts/ttf/*.* $FONT_PATH
 
-if confirm "Continue to ./12-setup-neovim.sh"; then
-  ./12-setup-neovim.sh
+if confirm "Continue?"; then
+  ./12-*.sh
 fi
 
 # vim:foldmethod=indent

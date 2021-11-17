@@ -23,8 +23,8 @@ sudo apt upgrade -y
 echo Installing APT.PACKAGES
 sudo apt install $(cat apt.packages) -y
 
-if confirm "Continue to ./06-setup-kitty.sh"; then
-  ./06-setup-kitty.sh
+if confirm "Continue?"; then
+  ./06-*.sh
 fi
 
 # vim:foldmethod=indent

@@ -41,8 +41,8 @@ if [ ! -d $FLUTTER_HOME ]; then
   git clone $FLUTTER_REPO $FLUTTER_HOME
 fi
 
-if confirm "Continue to ./03-setup-dvp.sh"; then
-  ./03-setup-dvp.sh
+if confirm "Continue?"; then
+  ./03-*.sh
 fi
 
 # vim:foldmethod=indent

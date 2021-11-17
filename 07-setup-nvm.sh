@@ -27,8 +27,8 @@ nvm use default
 npm i -g npm
 npm i -g $(cat ./npm.packages)
 
-if confirm "Continue to ./08-setup-rust.sh"; then
-  ./08-setup-rust.sh
+if confirm "Continue?"; then
+  ./08-*.sh
 fi
 
 # vim:foldmethod=indent

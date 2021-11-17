@@ -17,7 +17,7 @@ source ./vars.sh
 cd $POP_SETUP
 
 
-if confirm "Continue to ./20-setup-brew.sh"; then
+if confirm "Continue?"; then
   ./20-setup-brew.sh
 fi
 
