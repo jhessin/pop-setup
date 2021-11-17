@@ -3,7 +3,12 @@
 # Use variables for everything.
 export REPO_HOME=https://github.com/jhessin
 export SETUP_HOME=$HOME/setup
-export POP_SETUP=$SETUP_HOME/pop-setup
+
+if [ -d $HOME/Projects/pop-setup ]; then
+  export POP_SETUP=$HOME/Projects/pop-setup
+else
+  export POP_SETUP=$SETUP_HOME/pop-setup
+fi
 export USER_BIN=$HOME/.local/bin
 export PROJECTS=$HOME/Projects
 export CONFIGS=$HOME/.config

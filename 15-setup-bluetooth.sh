@@ -4,10 +4,10 @@ sudo sed -i 's/load-module module-bluetooth-discover$/load-module module-bluetoo
 
 sudo sed '/<\/busconfig>/i <policy user="pulse">\n<allow send_destination="org.ofono"\/>\n<\/policy>' /etc/dbus-1/system.d/ofono.conf
 
-sudo echo \[phonesim\] >> /etc/ofono/phonesim.conf
-sudo echo Driver=phonesim >> /etc/ofono/phonesim.conf
-sudo echo Address=127.0.0.1 >> /etc/ofono/phonesim.conf
-sudo echo Port=12345 >> /etc/ofono/phonesim.conf
+echo \[phonesim\] | sudo tee -a /etc/ofono/phonesim.conf
+echo Driver=phonesim | sudo tee -a /etc/ofono/phonesim.conf
+echo Address=127.0.0.1 | sudo tee -a /etc/ofono/phonesim.conf
+echo Port=12345 | sudo tee -a /etc/ofono/phonesim.conf
 
 # Add functions and vars
 source ./functions.sh

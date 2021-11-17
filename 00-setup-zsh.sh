@@ -36,9 +36,8 @@ sudo apt install zsh -y
 # setup zimfw
 curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 
-# run setup using zsh
-if confirm "Continue to ./01-setup-gh.sh?"; then
-  ./01-setup-gh.sh
-fi
+# continue setup using zsh
+./01-setup-gh.sh
+
 
 # vim:foldmethod=indent

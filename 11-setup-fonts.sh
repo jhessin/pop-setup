@@ -4,10 +4,6 @@
 source ./functions.sh
 source ./vars.sh
 
-# presudo so the user isn't surprised later
-echo We need sudo to set this stuff up.
-sudo echo Thank you we will be responsible!
-
 # Make sure we are in the right directory
 cd $POP_SETUP
 

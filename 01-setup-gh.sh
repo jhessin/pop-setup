@@ -20,7 +20,7 @@ echo Updating your system please wait...
 sudo apt update
 sudo apt upgrade -y
 
-# Install everything in the apt.packages file
+# Install gh utility
 echo Installing gh cli
 sudo apt install gh -y
 

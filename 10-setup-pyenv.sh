@@ -17,12 +17,17 @@ if confirm "Do you need to install pyenv?"; then
 fi
 
 source ~/.zprofile
-pyenv install 3.10.0
-pyenv global 3.10.0
-pyenv virtualenv 3.10.0 pyx
+
+if confirm "Do you need to set up virtualenv?"; then
+  pyenv install 3.10.0
+  pyenv virtualenv 3.10.0 pyx
+  pyenv global pyx
+fi
+
 
 # install pip.packages
-pip3 install $(cat ./pip.packages) --user
+python3 -m pip install --upgrade pip
+pip install $(cat ./pip.packages)
 
 if confirm "Continue to ./11-setup-fonts.sh"; then
   ./11-setup-fonts.sh

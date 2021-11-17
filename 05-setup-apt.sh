@@ -11,9 +11,8 @@ sudo echo Thank you we will be responsible!
 # Make sure we are in the right directory
 cd $POP_SETUP
 
-# Copy sources to /etc/apt/sources.list.d/
-echo Copying sources for updates
-sudo cp ./sources/*.list /etc/apt/sources.list.d/
+# Add other repos
+sudo add-apt-repository ppa:smoser/bluetooth
 
 # Update everything
 echo Updating your system please wait...

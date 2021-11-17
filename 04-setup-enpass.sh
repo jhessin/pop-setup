@@ -14,9 +14,11 @@ cd $POP_SETUP
 # setup gpg keys
 if confirm "Do you need gpg keys?"; then
   wget -O - https://apt.enpass.io/keys/enpass-linux.key | sudo tee /etc/apt/trusted.gpg.d/enpass.asc
-  curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
-  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 fi
+
+# Copy sources to /etc/apt/sources.list.d/
+echo Copying sources for updates
+sudo cp ./sources/*.list /etc/apt/sources.list.d/
 
 if confirm "Continue to ./05-setup-apt.sh"; then
   ./05-setup-apt.sh
