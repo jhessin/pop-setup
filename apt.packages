@@ -10,6 +10,8 @@ librust-openssl-dev
 golang-go
 gnome-tweaks
 lutris
+discord
+lynx
 
 cpu-checker
 qemu-kvm
@@ -41,3 +43,4 @@ libxml2-dev
 libxmlsec1-dev
 libffi-dev
 liblzma-dev
+libtext-multimarkdown-perl
