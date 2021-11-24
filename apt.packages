@@ -44,3 +44,4 @@ libxmlsec1-dev
 libffi-dev
 liblzma-dev
 libtext-multimarkdown-perl
+imagemagick
