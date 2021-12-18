@@ -23,6 +23,10 @@ sudo apt upgrade -y
 echo Installing APT.PACKAGES
 sudo apt install $(cat apt.packages) -y
 
+# Install all snaps
+echo Installing snap.packages
+sudo snap install $(cat snap.packages)
+
 if confirm "Continue?"; then
   ./06-*.sh
 fi
